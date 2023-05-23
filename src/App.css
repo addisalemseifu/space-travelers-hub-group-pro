@@ -46,10 +46,3 @@ body {
 .img {
   width: 25%;
 }
-
-.pro-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem;
-}
