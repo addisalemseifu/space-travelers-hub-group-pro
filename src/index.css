@@ -17,7 +17,7 @@ Variables
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
-  --clr-black:#121212
+  --clr-black: #121212;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.25rem;
@@ -48,7 +48,7 @@ body {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
-    background-color: var(--clr-white);
+  background-color: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -111,8 +111,9 @@ p {
     font-size: 1rem;
   }
 
-  th, td {
-    padding: none;
+  th,
+  td {
+    padding: 0;
   }
 
   body {
@@ -186,4 +187,3 @@ nav img {
   justify-content: space-between;
   align-items: center;
 }
-
