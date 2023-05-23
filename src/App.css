@@ -8,7 +8,6 @@ body {
   width: 100%;
 }
 
-
 .pro-container {
   display: flex;
   justify-content: space-between;
@@ -30,7 +29,7 @@ body {
   color: blue;
 }
 
-/*DRAGONS*/
+/* DRAGONS */
 
 .dragoncont {
   padding: 3rem;
