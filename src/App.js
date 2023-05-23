@@ -6,7 +6,7 @@ import Dragon from './components/dragons';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navigation />
       <div className="App">
         <Routes>
