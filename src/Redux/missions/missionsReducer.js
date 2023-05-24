@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+
 const FETCH_MISSIONS = 'spaceTravelersHub/missions/FETCH';
 const TOGGLE_RESERVATION = 'spaceTravelersHub/missions/TOGGLE_RESERVATION';
 export const fetchMissions = createAsyncThunk(
