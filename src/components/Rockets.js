@@ -1,11 +1,9 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Rocket from './Rocket';
 
 export default function Rockets() {
-  const dispatch = useDispatch();
   const { rockets } = useSelector((store) => store.rocket);
-  console.log(rockets);
   return (
     <div className="rockets">
       {

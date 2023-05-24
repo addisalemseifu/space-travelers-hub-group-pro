@@ -1,22 +1,19 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { reserve, cancelReserve } from '../redux/rockets/rocketsSlice';
 
 export default function Rocket({
+  // eslint-disable-next-line react/prop-types
   rocketName, description,
+  // eslint-disable-next-line react/prop-types
   flickrImages, id, reserved,
 }) {
   const dispatch = useDispatch();
-  const { rockets } = useSelector((store) => store.rocket);
-  console.log(rockets);
   function reserveHandler(id) {
-    console.log('reserve');
-
     dispatch(reserve(id));
   }
 
   function cancelReserveHandler(id) {
-    console.log('reserve');
     dispatch(cancelReserve(id));
   }
   return (
@@ -28,7 +25,7 @@ export default function Rocket({
         <p>{description}</p>
         <button
           type="button"
-          onClick={(e) => {
+          onClick={() => {
             reserveHandler(id);
           }}
         >

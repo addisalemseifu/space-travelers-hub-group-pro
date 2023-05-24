@@ -224,7 +224,6 @@ Rocket
   display: flex;
   flex-direction: column;
   margin-left: 1rem;
-  align-items: top;
   justify-content: flex-end;
   align-content: flex-end;
 }
@@ -242,12 +241,11 @@ Rocket
   display: flex;
   flex-direction: column;
   margin-left: 1rem;
-  align-items: top;
   justify-content: flex-end;
   align-content: flex-end;
 }
 
-.reserved-falc-conatainer button{
+.reserved-falc-conatainer button {
   margin-right: auto;
   padding: 0.3rem;
   background-color: transparent;
@@ -256,7 +254,7 @@ Rocket
   color: var(--clr-grey-5);
 }
 
-.reserved-falc-conatainer p h5{
+.reserved-falc-conatainer p h5 {
   display: inline;
   background-color: rgb(74, 171, 174);
   color: white;
