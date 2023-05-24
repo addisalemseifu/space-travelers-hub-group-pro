@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import dragonsReducer from './redux/dragons/dragonSlice';
+import dragonsReducer from './dragons/dragonSlice';
 
 const store = configureStore({
   reducer: {
