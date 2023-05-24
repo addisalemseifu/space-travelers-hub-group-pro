@@ -187,3 +187,13 @@ nav img {
   justify-content: space-between;
   align-items: center;
 }
+
+.links {
+  list-style: none;
+  margin-left: auto;
+}
+
+.active {
+  color: var(--clr-blue);
+  text-decoration: underline;
+}
