@@ -1,46 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getDragons } from '../store/dragon/dragonSlice';
+import DragonItem from './dragonItem';
 
 function Dragon() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getDragons());
+  }, [dispatch]);
+
+  const { dragons } = useSelector((store) => store.dragons);
+
   return (
-    <div className="dragoncont">
-      <div className="dragonsubcont">
-        <img src="https://picsum.photos/100/100" alt="randomimg" className="img" />
-        <div className="textcont">
-          <div className="header">
-            <h4>Falcon 1</h4>
-          </div>
-          <div className="para">
-            <p>
-              { /* eslint-disable-next-line max-len */ }
-              The Rockets section displays a list of all available SpaceX rockets. Users can book each rocket by clicking the reservation button or cancel the previously made booking. The same layout is used to form the Dragons section [added only if your team has 3 members].
-            </p>
-          </div>
-          <div className="btncont">
-            <button className="btn" type="button">
-              Reserve Rocket
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="dragonsubcont">
-        <img src="https://picsum.photos/100/100" alt="randomimg" className="img" />
-        <div className="textcont">
-          <div className="header">
-            <h4>Falcon 1</h4>
-          </div>
-          <div className="para">
-            <p>
-              { /* eslint-disable-next-line max-len */ }
-              The Rockets section displays a list of all available SpaceX rockets. Users can book each rocket by clicking the reservation button or cancel the previously made booking. The same layout is used to form the Dragons section [added only if your team has 3 members].
-            </p>
-          </div>
-          <div className="btncont">
-            <button className="btn" type="button">
-              Reserve Rocket
-            </button>
-          </div>
-        </div>
-      </div>
+    <div className="dragons">
+      {dragons.map((dragon) => (
+        <DragonItem
+          image={dragon.flickr_images}
+          key={dragon.id}
+          name={dragon.name}
+          description={dragon.description}
+          id={dragon.id}
+          type={dragon.type}
+          reserved={dragon.reserved}
+        />
+      ))}
     </div>
   );
 }
