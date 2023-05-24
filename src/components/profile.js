@@ -1,4 +1,5 @@
 import React from 'react';
+import MissionProfile from './missionProfile';
 
 function Profile() {
   return (
@@ -9,6 +10,7 @@ function Profile() {
       <div>
         <h3>My Rockets</h3>
       </div>
+      <MissionProfile />
     </div>
   );
 }
