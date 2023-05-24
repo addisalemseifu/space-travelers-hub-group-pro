@@ -6,6 +6,15 @@ export default function Navigation() {
   return (
     <nav>
       <img src={planet} alt="" />
+      <li className="nav-item">
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          {' '}
+          Dragon
+        </NavLink>
+      </li>
       <li className="links">
         <NavLink to="/" ClassName="link">
           Rockets
