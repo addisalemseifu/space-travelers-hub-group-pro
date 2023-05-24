@@ -15,6 +15,11 @@ export default function Navigation() {
           Dragon
         </NavLink>
       </li>
+      <li className="links">
+        <NavLink to="/" ClassName="link">
+          Rockets
+        </NavLink>
+      </li>
       <Link to="/profile">
         <li className="navlink" title="profile">
           My Profile
