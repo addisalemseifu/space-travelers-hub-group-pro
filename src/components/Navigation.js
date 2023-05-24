@@ -10,6 +10,11 @@ export default function Navigation() {
         <h2>Space Travelers&apos; Hub</h2>
       </div>
       <div className="navcont">
+        <li className="links">
+          <NavLink NavLink to="/" ClassName="link">
+            Rockets
+          </NavLink>
+        </li>
         <li className="nav-item">
           <NavLink
             to="/dragons"
@@ -17,11 +22,6 @@ export default function Navigation() {
           >
             {' '}
             Dragon
-          </NavLink>
-        </li>
-        <li className="links">
-          <NavLink to="/" ClassName="link">
-            Rockets
           </NavLink>
         </li>
         <li className="nav-item">

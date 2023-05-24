@@ -19,7 +19,7 @@ Variables
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-black: #121212;
   --transition: all 0.3s linear;
-  --spacing: 0.25rem;
+  --spacing: 0.12rem;
   --radius: 0.25rem;
   --large-screen-width: 1170px;
   --small-screen-width: 90vw;
@@ -197,7 +197,7 @@ nav img {
 
 .active {
   color: var(--clr-blue);
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 /*
@@ -257,7 +257,15 @@ DRAGONS
   width: 18%;
 }
 
-.cancel-button,
+.cancel-button {
+  margin-right: auto;
+  padding: 0.3rem;
+  background-color: transparent;
+  border: 1px solid var(--clr-grey-5);
+  border-radius: 2px;
+  color: var(--clr-grey-5);
+}
+
 .reserve-button {
   background-color: #645cff;
   color: white;
