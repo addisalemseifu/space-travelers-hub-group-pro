@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import MissionProfile from './missionProfile';
 
 function Profile() {
   const { dragons } = useSelector((store) => store.dragons);
@@ -11,9 +12,10 @@ function Profile() {
         <h3>My Rockets</h3>
       </div>
       <div className="dragons-list">
-        <h2>My Dragons</h2>
+        <h3>My Dragons</h3>
         <table>
           <tbody>
+            { filteredDragons.length === 0 && <p>You have no reserved dragons</p>}
             {filteredDragons.map((dragon) => {
               const dragonId = dragon.id;
               return (
@@ -25,9 +27,7 @@ function Profile() {
           </tbody>
         </table>
       </div>
-      <div>
-        <h3>My Missions</h3>
-      </div>
+      <MissionProfile />
     </div>
   );
 }
