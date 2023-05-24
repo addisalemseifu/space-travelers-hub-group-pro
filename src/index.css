@@ -168,6 +168,8 @@ nav {
   border: solid 1px #e8e8e8;
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -204,26 +206,11 @@ DRAGONS
 ===============
 */
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  width: 100%;
-}
-
 .pro-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
-}
-
-nav {
-  width: 100%;
-  justify-content: space-between;
 }
 
 .logoname {
@@ -237,10 +224,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
-}
-
-.active {
-  text-decoration: underline !important;
 }
 
 .nav-item,
@@ -279,7 +262,7 @@ nav {
   background-color: #645cff;
   color: white;
   letter-spacing: 0.15rem;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   padding: 8px;
   text-align: center;
   border: none;
