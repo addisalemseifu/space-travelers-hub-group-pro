@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { getRockets } from './redux/rockets/rocketsSlice';
 import Navigation from './components/Navigation';
 import Profile from './components/profile';
+import Dragon from './components/dragons';
 import Rockets from './components/Rockets';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Navigation />
       <div className="App">
         <Routes>
+          <Route path="/" element={<Dragon />} />
           <Route path="/" element={<Rockets />} />
           <Route path="profile" element={<Profile />} />
         </Routes>
@@ -24,5 +26,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
