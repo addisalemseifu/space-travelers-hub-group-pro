@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getDragons } from '../store/dragon/dragonSlice';
+import { getDragons } from '../redux/dragons/dragonSlice';
 import DragonItem from './dragonItem';
 
 function Dragon() {
