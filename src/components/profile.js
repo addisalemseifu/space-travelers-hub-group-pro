@@ -6,11 +6,11 @@ function Profile() {
     <div className="pro-container">
       <div>
         <h3>My Missions</h3>
+        <MissionProfile />
       </div>
       <div>
         <h3>My Rockets</h3>
       </div>
-      <MissionProfile />
     </div>
   );
 }

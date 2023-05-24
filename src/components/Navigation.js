@@ -20,6 +20,11 @@ export default function Navigation() {
           Rockets
         </NavLink>
       </li>
+      <li>
+        <NavLink to="/mission" ClassName="mission">
+          Missions
+        </NavLink>
+      </li>
       <Link to="/profile">
         <li className="navlink" title="profile">
           My Profile

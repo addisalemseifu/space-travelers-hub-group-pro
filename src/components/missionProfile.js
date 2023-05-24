@@ -7,7 +7,6 @@ const MissionProfile = () => {
 
   return (
     <div className="reserve-wrapper">
-      <h2>My Missions</h2>
       <div className="reserve-container">
         { missions.length === 0 && <p>You have no reserved missions</p>}
         {missions.map((mission) => (
