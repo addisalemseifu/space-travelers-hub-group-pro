@@ -20,6 +20,7 @@ function Dragon() {
           name={dragon.name}
           description={dragon.description}
           id={dragon.id}
+          type={dragon.type}
           reserved={dragon.reserved}
         />
       ))}
