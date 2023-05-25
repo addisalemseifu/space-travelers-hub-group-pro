@@ -289,9 +289,9 @@ DRAGONS
 }
 
 .dragons-item {
-  border: 1px solid #dee2e6;
-  width: 450%;
-  padding: 10px;
+  border: solid 0.5px #ebe0e0;
+  border-spacing: 0;
+  min-width: 400%;
 }
 
 /*
@@ -393,7 +393,6 @@ Missions
 table,
 th,
 td {
-  border: solid 1px #d1d1d1;
   border-collapse: collapse;
   padding: 10px;
   text-align: start;
@@ -403,10 +402,6 @@ td {
   border: solid 0.5px #ebe0e0;
   border-spacing: 0;
   width: 100%;
-}
-
-table {
-  margin: 20px 80px;
 }
 
 .mission-name {
