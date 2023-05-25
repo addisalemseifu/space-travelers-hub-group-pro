@@ -378,11 +378,9 @@ My profile
   border-spacing: 0;
 }
 
-.profile_table td {
-  border: solid 0.5px #ebe0e0;
-  border-spacing: 0;
-  width: 100%;
-=======
+
+/*
+===============
 Missions
 ===============
 */
@@ -394,6 +392,12 @@ td {
   border-collapse: collapse;
   padding: 10px;
   text-align: start;
+}
+
+.profile_table td {
+  border: solid 0.5px #ebe0e0;
+  border-spacing: 0;
+  width: 100%;
 }
 
 table {
