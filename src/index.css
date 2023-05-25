@@ -295,6 +295,12 @@ DRAGONS
   font-size: 1rem;
 }
 
+.dragons-item {
+  border: 1px solid #dee2e6;
+  width: 450%;
+  padding: 10px;
+}
+
 /*
 ===============
 Rocket

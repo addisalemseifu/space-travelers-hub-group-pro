@@ -13,19 +13,23 @@ function Profile() {
       </div>
       <div className="dragons-list">
         <h3>My Dragons</h3>
-        <table>
-          <tbody>
-            { filteredDragons.length === 0 && <p>You have no reserved dragons</p>}
-            {filteredDragons.map((dragon) => {
-              const dragonId = dragon.id;
-              return (
-                <tr key={dragonId}>
-                  <td>{dragon.name}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        <div className="dragons-list2">
+          <table>
+            <tbody>
+              { filteredDragons.length === 0 && <p>You have no reserved dragons</p>}
+              {filteredDragons.map((dragon) => {
+                const dragonId = dragon.id;
+                return (
+                  <div className="dragons-item" key={dragonId}>
+                    <tr key={dragonId}>
+                      <td>{dragon.name}</td>
+                    </tr>
+                  </div>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
       <MissionProfile />
     </div>

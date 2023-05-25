@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import axios from 'axios';
 
 const baseUrl = 'https://api.spacexdata.com/v3/dragons';
 const FETCH_DRAGONS = 'space-travelers-react-redux/dragons/getDragons';
