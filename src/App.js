@@ -5,6 +5,7 @@ import { getRockets } from './redux/rockets/rocketsSlice';
 import Navigation from './components/Navigation';
 import Profile from './components/profile';
 import Rockets from './components/Rockets';
+import Missions from './components/mission';
 import Dragon from './components/dragons';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Rockets />} />
           <Route path="/dragons" element={<Dragon />} />
+          <Route path="mission" element={<Missions />} />
           <Route path="profile" element={<Profile />} />
         </Routes>
       </div>
