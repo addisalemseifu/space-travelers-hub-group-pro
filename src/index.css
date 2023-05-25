@@ -206,13 +206,6 @@ DRAGONS
 ===============
 */
 
-.pro-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem;
-}
-
 .logoname {
   display: flex;
   align-items: center;
@@ -369,6 +362,30 @@ Rocket
 
 /*
 ===============
+My profile
+===============
+*/
+
+.pro-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.profile_table {
+  border: solid 0.5px #ebe0e0;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.profile_table tbody {
+  border: solid 0.5px #ebe0e0;
+  border-spacing: 0;
+}
+
+/*
+===============
 Missions
 ===============
 */
@@ -380,6 +397,12 @@ td {
   border-collapse: collapse;
   padding: 10px;
   text-align: start;
+}
+
+.profile_table td {
+  border: solid 0.5px #ebe0e0;
+  border-spacing: 0;
+  width: 100%;
 }
 
 table {
