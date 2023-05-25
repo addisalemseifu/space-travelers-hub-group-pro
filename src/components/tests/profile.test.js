@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import Profile from '../../components/profile';
+import Profile from '../profile';
 import store from '../../redux/store';
 
 it('renders correctly', () => {

@@ -4,12 +4,12 @@ import { Provider } from 'react-redux';
 import Missions from '../mission';
 import store from '../../redux/store';
 
-describe("Missions page", () => {
-it('renders correctly', () => {
-  const Mission = renderer.create(
+describe('Missions page', () => {
+  it('renders correctly', () => {
+    const Mission = renderer.create(
       <Provider store={store}><Missions /></Provider>,
     )
-    .toJSON();
-  expect(Mission).toMatchSnapshot();
+      .toJSON();
+    expect(Mission).toMatchSnapshot();
+  });
 });
-})
