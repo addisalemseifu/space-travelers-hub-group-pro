@@ -6,6 +6,7 @@ const dataUrl = 'https://api.spacexdata.com/v4/rockets';
 
 export const getRockets = createAsyncThunk('rocket/getRockets', () => axios.get(dataUrl)
   .then((res) => res.data)
+  // eslint-disable-next-line no-console
   .catch((err) => console.log(err)));
 
 const initialState = {
