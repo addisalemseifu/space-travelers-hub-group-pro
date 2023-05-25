@@ -269,7 +269,7 @@ DRAGONS
 .reserve-button {
   background-color: #645cff;
   color: white;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.11rem;
   border-radius: 0.3rem;
   padding: 8px;
   text-align: center;
@@ -278,20 +278,21 @@ DRAGONS
 }
 
 .reservation {
-  background-color: #645cff;
+  background-color: rgb(74, 171, 174);
   color: white;
   letter-spacing: 0.1rem;
   border-radius: 0.25rem;
   padding: 1px;
   text-align: center;
+  margin-right: 3px;
 }
 
 .header h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .textcont p {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /*
