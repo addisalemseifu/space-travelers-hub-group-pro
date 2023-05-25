@@ -5,25 +5,21 @@ import DragonItem from './dragonItem';
 
 function Dragon() {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getDragons());
-  }, [dispatch]);
-
   const { dragons } = useSelector((store) => store.dragons);
+  const { isLoading } = useSelector((state) => state.dragons);
+  useEffect(() => {
+    if (isLoading === false) dispatch(getDragons());
+  }, [dispatch, isLoading]);
 
   return (
     <div className="dragons">
-      {dragons.map((dragon) => (
-        <DragonItem
-          image={dragon.flickr_images}
-          key={dragon.id}
-          name={dragon.name}
-          description={dragon.description}
-          id={dragon.id}
-          type={dragon.type}
-          reserved={dragon.reserved}
-        />
-      ))}
+      {isLoading
+       && dragons.map((dragon) => (
+         <DragonItem
+           key={dragon.id}
+           dragon={dragon}
+         />
+       ))}
     </div>
   );
 }
