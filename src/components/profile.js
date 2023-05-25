@@ -4,12 +4,27 @@ import MissionProfile from './missionProfile';
 
 function Profile() {
   const { dragons } = useSelector((store) => store.dragons);
+  const { rockets } = useSelector((store) => store.rocket);
   const filteredDragons = dragons.filter((dragon) => dragon.reserved === true);
+  const filteredRockets = rockets.filter((rocket) => rocket.reserved === true);
 
   return (
     <div className="pro-container">
-      <div>
-        <h3>My Rockets</h3>
+      <div className="dragons-list">
+        <h4>My Rockets</h4>
+        <table className="profile_table">
+          <tbody>
+            { filteredRockets.length === 0 && <p>You have no reserved dragons</p>}
+            {filteredRockets.map((rocket) => {
+              const rocketId = rocket.id;
+              return (
+                <tr key={rocketId}>
+                  <td>{rocket.name}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
       <div className="dragons-list">
         <h3>My Dragons</h3>
