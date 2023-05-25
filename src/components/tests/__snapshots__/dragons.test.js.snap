@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Rockets Component should render Rockets component 1`] = `
+<div
+  className="dragons"
+/>
+`;
+
+exports[`dragons renders correctly 1`] = `
+<div
+  className="dragons"
+/>
+`;
