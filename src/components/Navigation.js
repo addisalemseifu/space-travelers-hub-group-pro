@@ -24,7 +24,7 @@ export default function Navigation() {
             Dragon
           </NavLink>
         </li>
-        <li>
+        <li className="nav-item">
           <NavLink to="/mission" ClassName="mission">
             Missions
           </NavLink>
