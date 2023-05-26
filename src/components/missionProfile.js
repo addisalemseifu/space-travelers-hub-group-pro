@@ -7,10 +7,10 @@ const MissionProfile = () => {
 
   return (
     <div className="dragons-list">
-      <h4 className="profile-header">My Dragons</h4>
+      <h4 className="profile-header">My Missions</h4>
       <table className="profile_table">
         <tbody className="body">
-          { filteredMissions.length === 0 && <p>You have no reserved dragons</p>}
+          { filteredMissions.length === 0 && <p>You have no reserved missions</p>}
           {filteredMissions.map((mission) => {
             const missionId = mission.mission_id;
             return (
