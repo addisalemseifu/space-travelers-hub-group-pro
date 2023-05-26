@@ -4,6 +4,7 @@ import Rocket from './Rocket';
 
 export default function Rockets() {
   const { rockets } = useSelector((store) => store.rocket);
+  console.log(rockets);
   return (
     <div className="rockets">
       {
