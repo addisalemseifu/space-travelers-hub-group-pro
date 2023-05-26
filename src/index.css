@@ -216,7 +216,7 @@ DRAGONS
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .nav-item,
@@ -230,6 +230,13 @@ DRAGONS
   text-decoration: none;
   color: blue;
   margin-left: auto;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.item {
+  border-left: 2px solid rgb(173, 173, 176);
+  color: #fff;
 }
 
 /* DRAGONS */
