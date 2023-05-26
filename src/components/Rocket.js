@@ -1,13 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { reserve, cancelReserve } from '../redux/rockets/rocketsSlice';
 
-export default function Rocket({
-  // eslint-disable-next-line react/prop-types
-  rocketName, description,
-  // eslint-disable-next-line react/prop-types
-  flickrImages, id, reserved,
-}) {
+export default function Rocket({ rocket }) {
   const dispatch = useDispatch();
   function reserveHandler(id) {
     dispatch(reserve(id));
@@ -18,15 +14,15 @@ export default function Rocket({
   }
   return (
     <div className="rocket-container">
-      <img src={flickrImages} alt="" />
-      {!reserved && (
+      <img src={rocket.flickr_images} alt="" />
+      {!rocket.reserved && (
       <div className="falc-conatainer">
-        <h4>{rocketName}</h4>
-        <p>{description}</p>
+        <h4>{rocket.name}</h4>
+        <p>{rocket.description}</p>
         <button
           type="button"
           onClick={() => {
-            reserveHandler(id);
+            reserveHandler(rocket.id);
           }}
         >
           Reserve Rocket
@@ -34,17 +30,17 @@ export default function Rocket({
       </div>
       )}
 
-      {reserved && (
+      {rocket.reserved && (
       <div className="reserved-falc-conatainer">
-        <h4>{rocketName}</h4>
+        <h4>{rocket.name}</h4>
         <p>
           <h5>Reserved</h5>
-          {description}
+          {rocket.description}
         </p>
         <button
           type="button"
           onClick={() => {
-            cancelReserveHandler(id);
+            cancelReserveHandler(rocket.id);
           }}
         >
           Cancel Reservation
@@ -55,3 +51,13 @@ export default function Rocket({
     </div>
   );
 }
+
+Rocket.propTypes = {
+  rocket: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    flickr_images: PropTypes.string,
+    reserved: PropTypes.bool,
+  }).isRequired,
+};

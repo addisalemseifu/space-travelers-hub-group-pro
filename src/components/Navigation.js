@@ -10,7 +10,7 @@ export default function Navigation() {
         <h2>Space Travelers&apos; Hub</h2>
       </div>
       <div className="navcont">
-        <li className="links">
+        <li className="nav-item">
           <NavLink NavLink to="/" ClassName="link">
             Rockets
           </NavLink>
@@ -29,6 +29,7 @@ export default function Navigation() {
             Missions
           </NavLink>
         </li>
+        <li className="item" />
         <li className="nav-item">
           <NavLink
             to="/profile"
