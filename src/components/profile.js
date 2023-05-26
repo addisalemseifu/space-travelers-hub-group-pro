@@ -11,15 +11,15 @@ function Profile() {
   return (
     <div className="pro-container">
       <div className="dragons-list">
-        <h4>My Rockets</h4>
+        <h4 className="profile-header">My Rockets</h4>
         <table className="profile_table">
-          <tbody>
-            { filteredRockets.length === 0 && <p>You have no reserved dragons</p>}
+          <tbody className="body">
+            { filteredRockets.length === 0 && <p>You have no reserved rockets</p>}
             {filteredRockets.map((rocket) => {
               const rocketId = rocket.id;
               return (
                 <tr key={rocketId}>
-                  <td>{rocket.name}</td>
+                  <td className="text">{rocket.name}</td>
                 </tr>
               );
             })}
@@ -27,24 +27,21 @@ function Profile() {
         </table>
       </div>
       <div className="dragons-list">
-        <h3>My Dragons</h3>
-        <div className="dragons-list2">
-          <table>
-            <tbody>
-              { filteredDragons.length === 0 && <p>You have no reserved dragons</p>}
-              {filteredDragons.map((dragon) => {
-                const dragonId = dragon.id;
-                return (
-                  <div className="dragons-item" key={dragonId}>
-                    <tr key={dragonId}>
-                      <td>{dragon.name}</td>
-                    </tr>
-                  </div>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+        <h4 className="profile-header">My Dragons</h4>
+        <table className="profile_table">
+          <tbody className="body">
+            { filteredDragons.length === 0 && <p>You have no reserved dragons</p>}
+            {filteredDragons.map((dragon) => {
+              const dragonId = dragon.id;
+              return (
+                <tr key={dragonId}>
+                  <td className="text">{dragon.name}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+
       </div>
       <MissionProfile />
     </div>
