@@ -88,6 +88,8 @@ To test the project, execute the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 👥 Authors <a name="authors"></a>
+
 
 👤 **Daniel Kigozi**
 
