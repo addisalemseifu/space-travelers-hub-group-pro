@@ -249,12 +249,11 @@ DRAGONS
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 3px;
   gap: 1.5rem;
 }
 
 .img {
-  width: 18%;
+  width: 10rem;
 }
 
 .cancel-button {
@@ -288,17 +287,11 @@ DRAGONS
 }
 
 .header h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .textcont p {
   font-size: 1rem;
-}
-
-.dragons-item {
-  border: solid 0.5px #ebe0e0;
-  border-spacing: 0;
-  min-width: 400%;
 }
 
 /*
@@ -390,6 +383,13 @@ My profile
   width: 100%;
 }
 
+td,
+th {
+  border: 1px solid #dee2e6;
+  text-align: left;
+  padding: 8px;
+}
+
 .profile_table td {
   border: solid 0.2px #f5dede;
   border-spacing: 0;
@@ -438,11 +438,13 @@ th {
 }
 
 .member-status-cell span {
-  color: #fff;
   background-color: #808080;
-  padding: 5px;
-  border-radius: 5px;
+  color: #fff;
   font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  padding: 0.25rem;
 }
 
 .member-status-cell span.active-badge {
@@ -478,4 +480,36 @@ th {
   padding: 12px;
   border-radius: 4px;
   margin: 0%;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 2rem;
+}
+
+.missions-table td:first-child {
+  font-weight: bold;
+}
+
+.missions-table td:nth-child(3) {
+  width: 130px;
+  text-align: center;
+}
+
+.missions-table td:nth-child(4) {
+  width: 150px;
+  text-align: center;
+}
+
+.missions-table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.invisible {
+  color: #fff;
+}
+
+tbody > tr > :nth-child(2) {
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
