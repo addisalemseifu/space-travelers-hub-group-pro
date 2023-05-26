@@ -1,9 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import { reserve, cancelReserve } from '../redux/rockets/rocketsSlice';
 
-export default function Rocket({ rocket }) {
+export default function Rocket({
+  // eslint-disable-next-line react/prop-types
+  rocketName, description,
+  // eslint-disable-next-line react/prop-types
+  flickrImages, id, reserved,
+}) {
   const dispatch = useDispatch();
   function reserveHandler(id) {
     dispatch(reserve(id));
@@ -14,15 +18,15 @@ export default function Rocket({ rocket }) {
   }
   return (
     <div className="rocket-container">
-      <img src={rocket.flickr_images} alt="" />
-      {!rocket.reserved && (
+      <img src={flickrImages} alt="" />
+      {!reserved && (
       <div className="falc-conatainer">
-        <h4>{rocket.name}</h4>
-        <p>{rocket.description}</p>
+        <h4>{rocketName}</h4>
+        <p>{description}</p>
         <button
           type="button"
           onClick={() => {
-            reserveHandler(rocket.id);
+            reserveHandler(id);
           }}
         >
           Reserve Rocket
@@ -30,17 +34,17 @@ export default function Rocket({ rocket }) {
       </div>
       )}
 
-      {rocket.reserved && (
+      {reserved && (
       <div className="reserved-falc-conatainer">
-        <h4>{rocket.name}</h4>
+        <h4>{rocketName}</h4>
         <p>
           <h5>Reserved</h5>
-          {rocket.description}
+          {description}
         </p>
         <button
           type="button"
           onClick={() => {
-            cancelReserveHandler(rocket.id);
+            cancelReserveHandler(id);
           }}
         >
           Cancel Reservation
@@ -51,13 +55,3 @@ export default function Rocket({ rocket }) {
     </div>
   );
 }
-
-Rocket.propTypes = {
-  rocket: PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    description: PropTypes.string,
-    flickr_images: PropTypes.string,
-    reserved: PropTypes.bool,
-  }).isRequired,
-};

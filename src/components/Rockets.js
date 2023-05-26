@@ -9,8 +9,12 @@ export default function Rockets() {
       {
             rockets.map((rocket) => (
               <Rocket
+                reserved={rocket.reserved}
+                rocketName={rocket.name}
+                description={rocket.description}
+                flickrImages={rocket.flickr_images}
+                id={rocket.id}
                 key={rocket.id}
-                rocket={rocket}
               />
             ))
         }
